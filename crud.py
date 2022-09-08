@@ -1,5 +1,6 @@
 """CRUD operations."""
 
+# from turtle import pos
 from model import db, User, Movie, Rating, connect_to_db
 
 
@@ -14,7 +15,12 @@ def create_user(email, password):
     return user
 
 
+def create_movie(title, overview, release_date, poster_path):
+    """Create and return a new movie."""
 
+    movie = Movie(title=title, overview=overview, release_date=release_date, poster_path=poster_path)
+
+    return movie
 
 
 
